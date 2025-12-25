@@ -1,0 +1,224 @@
+{
+  "info": {
+    "_postman_id": "37f62772-042a-4e0d-bde8-488e26bf8be7",
+    "name": "Selenium API Understand",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "611814",
+    "_collection_link": "https://galactic-moon-789755.postman.co/workspace/TheTestingAcademy~24d6c141-0f4f-47a0-a75d-de5eae89bb68/collection/611814-37f62772-042a-4e0d-bde8-488e26bf8be7?action=share&source=collection_link&creator=611814"
+  },
+  "item": [
+    {
+      "name": "Get Status",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"user\": \"alice\",\n\t\"password\": \"hunter2\",\n\t\"capabilities\": {\n        \"alwaysMatch\": {\n            \"cloud:user\": \"alice\",\n            \"cloud:password\": \"hunter2\",\n            \"platformName\": \"mac\"\n        },\n        \"firstMatch\": [\n            {\"browserName\": \"chrome\"},\n            {\"browserName\": \"edge\"}\n        ]\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9515/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9515",
+          "path": [
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Session Step 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"capabilities\": {\"browserName\": \"edge\", \"platformName\": \"mac\"}\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:58075./session",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "58075.",
+          "path": [
+            "session"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Session Step 2",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"user\": \"alice\",\n\t\"password\": \"hunter2\",\n\t\"capabilities\": {\n        \"alwaysMatch\": {\n            \"cloud:user\": \"alice\",\n            \"cloud:password\": \"hunter2\",\n            \"platformName\": \"mac\"\n        },\n        \"firstMatch\": [\n            {\"browserName\": \"chrome\"},\n            {\"browserName\": \"edge\"}\n        ]\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9515/session/96484dc419bc8b01266b7030a3a94d61",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9515",
+          "path": [
+            "session",
+            "96484dc419bc8b01266b7030a3a94d61"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Navigate to Command",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"url\": \"https://thetestingacademy.com\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:58075/session/841d18b9c0ec4aaaf1c3baeb1e4b2a83/url",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "58075",
+          "path": [
+            "session",
+            "841d18b9c0ec4aaaf1c3baeb1e4b2a83",
+            "url"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Maximize Window",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"url\": \"https://thetestingacademy.com\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9515/session/fee166136f700d1f8d058af92980f651/window/maximize",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9515",
+          "path": [
+            "session",
+            "fee166136f700d1f8d058af92980f651",
+            "window",
+            "maximize"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Window",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"url\": \"https://thetestingacademy.com\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9515/session/68614348f0cb4f521b963ed00eefbd0a/window/rect",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9515",
+          "path": [
+            "session",
+            "68614348f0cb4f521b963ed00eefbd0a",
+            "window",
+            "rect"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get source",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"url\": \"https://thetestingacademy.com\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9515/session/fee166136f700d1f8d058af92980f651/source",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9515",
+          "path": [
+            "session",
+            "fee166136f700d1f8d058af92980f651",
+            "source"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

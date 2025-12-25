@@ -1,0 +1,29 @@
+package com.thetestingacademy.ex02_Selenium_Basics;
+
+
+
+import io.qameta.allure.Description;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestSelenium12_Navigation_GET_NAVIGATETO {
+
+    @Description("Open the URL")
+    @Test
+    public void test_Selenium01(){
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://google.com");
+
+        // Use navigation Commands
+        // driver.get("url")-> Navigate to URL
+
+        driver.navigate().to("https://bing.com");
+        driver.navigate().back();
+        driver.navigate().refresh();
+        driver.navigate().forward();
+    }
+
+}
+

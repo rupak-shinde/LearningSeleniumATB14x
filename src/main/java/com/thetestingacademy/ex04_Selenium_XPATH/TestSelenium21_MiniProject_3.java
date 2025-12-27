@@ -1,5 +1,7 @@
 package com.thetestingacademy.ex04_Selenium_XPATH;
 
+import io.qameta.allure.testng.AllureTestNg;
+import org.testng.annotations.Listeners;
 import com.thetestingacademy.CommonToAll;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
@@ -40,7 +42,6 @@ public class TestSelenium21_MiniProject_3 extends CommonToAll {
         WebElement h2 = driver.findElement(By.xpath("//h2[text()='Make Appointment']"));
         Assert.assertEquals(h2.getText(),"Make Appointment");
         Assert.assertTrue(h2.isDisplayed());
-
 
         closeBrowser(driver);
 

@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 public class TestSelenium21_MiniProject_3 extends CommonToAll {
@@ -22,8 +23,11 @@ public class TestSelenium21_MiniProject_3 extends CommonToAll {
     @Description("Verify that with valid email, pass, appointment page is loaded")
     @Test
     public void test_katalon_login() throws InterruptedException {
+
         WebDriver driver = new ChromeDriver();
         openBrowser(driver,"https://katalon-demo-cura.herokuapp.com");
+
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); Implicit wait
 
         WebElement make_appointment_button_Xpath = driver.findElement(By.xpath("//a[contains(text(),\"Make Appointment\")]"));
         make_appointment_button_Xpath.click();
